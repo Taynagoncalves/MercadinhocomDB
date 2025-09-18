@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mercadinho Digital</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Faster+One&family=Rubik+Doodle+Shadow&family=Sigmar+One&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <h1 class="title">TayControl Market</h1>
+  </header>
+
+  <main class="container max-w-4xl mx-auto p-4">
+    <div class="top-bar flex justify-between items-center mb-4">
+      <h2 class="section-title text-2xl font-bold">Lista de Produtos</h2>
+      <button id="addBtn" class="btn-primary">+ Adicionar Produto</button>
+    </div>
+   
+    <table id="productTable" class="product-table">
+      <thead>
+        <tr>
+          <th>ID</th> 
+          <th>NOME</th>
+          <th>PREÇO(R$)</th>
+          <th>QUANTIDADE</th>
+          <th>EDITAR/DELETAR</th>
+        </tr>
+      </thead>
+      <tbody>
+      
+      </tbody>
+    </table>
+    <p id="noProducts" class="text-gray-500 mt-4" style="display: block;">Nenhum produto cadastrado ainda.</p>
+  </main>
+
+
+<div id="modal" class="modal hidden">
+  <div class="modal-content">
+    <span id="closeModal" class="modal-close">&times;</span>
+    <h2 id="modalTitle" class="modal-title">Adicionar Produto</h2>
+    <form id="productForm" class="form">
+      <input type="hidden" id="productId" />
+      <input type="text" id="name" placeholder="Nome do Produto" required />
+      <input type="number" id="price" placeholder="Preço" required />
+      <input type="number" id="quantity" placeholder="Quantidade" required />
+      <div class="form-actions">
+        <button type="button" id="cancelBtn" class="btn-secondary">Cancelar</button>
+        <button type="submit" class="btn-primary">Salvar</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+  <script src="mercadinhoscript.js"></script>
+</body>
+</html>
